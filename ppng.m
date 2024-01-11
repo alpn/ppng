@@ -15,6 +15,9 @@ int main (int argc, char * const argv[]){
                             usingType:NSBitmapImageFileTypePNG properties:@{}];
     [image release];
 
+    if(!data)
+        return 1;
+
     if(![data writeToFile:[NSString stringWithUTF8String:argv[1]] atomically:YES])
         return 1;
 
