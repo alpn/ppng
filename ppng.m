@@ -12,7 +12,7 @@ int main(int argc, char * const argv[]) {
         return 1;
 
     NSData *data = [NSBitmapImageRep representationOfImageRepsInArray:[image representations]
-                            usingType:NSBitmapImageFileTypePNG properties:@{}];
+                        usingType:NSBitmapImageFileTypeJPEG properties:@{NSImageCompressionFactor: @0.1}];
     [image release];
 
     if (!data)
