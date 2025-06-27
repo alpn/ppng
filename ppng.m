@@ -21,5 +21,8 @@ int main(int argc, char * const argv[]) {
     if (![data writeToFile:[NSString stringWithUTF8String:argv[1]] atomically:YES])
         return 1;
 
+    [pb declareTypes:@[] owner:nil];
+    [pb release];
+
     return 0;
 }
